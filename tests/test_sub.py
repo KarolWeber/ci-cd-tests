@@ -1,8 +1,7 @@
 import allure
 import pytest
 import requests
-
-BASE_URL = "http://localhost:5000"
+from config import BASE_URL
 
 @allure.suite("Calculator tests")
 @allure.feature("Calculator")
