@@ -14,7 +14,7 @@ from config import BASE_URL
 @allure.title("{title}")
 def test_sub(title, a, b, expected):
     with allure.step("Send request"):
-        r = requests.get(f"{BASE_URL}/sub?a={a}&b={b}")
+        r = requests.get(f"{BASE_URL}/sub?a={a}&b={b}", timeout=10)
     with allure.step("Verify response"):
         assert r.status_code == 200
         assert r.text == expected
