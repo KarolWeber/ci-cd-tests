@@ -4,8 +4,7 @@ import requests
 from config import BASE_URL
 
 @allure.suite("Calculator tests")
-@allure.feature("Calculator")
-@allure.sub_suite("Sub tests")
+@allure.suite("Sub tests")
 @pytest.mark.parametrize("title,a,b,expected", [
     ("Positive", 7, 5, "2"),
     ("Negative", -8, -4, "-4"),
