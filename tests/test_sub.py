@@ -3,7 +3,7 @@ import pytest
 import requests
 from config import BASE_URL
 
-@allure.suite("Calculator tests")
+@allure.parent_suite("Calculator tests")
 @allure.suite("Sub tests")
 @pytest.mark.parametrize("title,a,b,expected", [
     ("Positive", 7, 5, "2"),
